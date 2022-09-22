@@ -22,6 +22,8 @@ DROP TABLE Citoyen
 INSERT INTO Citoyen VALUES
 ('Le roi', 'Lion'),
 ('Winnnie', 'L''ourson')
+('Le roi', 'Lion2'),
+('Winnnie', 'L''ourson2')
 
 -- Selectionner des données dans une table
 SELECT * FROM Citoyen
@@ -29,3 +31,8 @@ SELECT * FROM Citoyen
 -- Selectionner des données dans une table avec WHERE
 SELECT * FROM Citoyen WHERE prenom = 'Lion'
 
+-- Selectionner une colonne dans une table avec WHERE
+SELECT Prenom FROM Citoyen WHERE prenom = 'Lion'
+
+-- Mettre à jour des données avec UPDATE
+UPDATE Citoyen SET prenom = 'D''Agobert' WHERE prenom = 'Lion2'
