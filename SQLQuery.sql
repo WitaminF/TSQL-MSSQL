@@ -1,14 +1,14 @@
+-- Créer une base de données
 CREATE DATABASE BDD
 
-use[BDD]
-create table ma_table_1 (nom varchar(200))
+-- Renomer une base de données
+ALTER DATABASE BDD MODIFY NAME = BDD_2
 
-sp_rename ma_table_1, ma_table
+-- Supprimer une base de données
+DROP DATABASE BDD_2
 
-sp_rename ma_table, ma_table_1
+-- Creer une table
+CREATE DATABASE BDD
+USE BDD
+CREATE TABLE Personne (nom varchar(200), prenom varchar(200))
 
-drop table ma_table_1
-
-create database Debutant
-
-alter database Debutant modify name = DebutantModifie
