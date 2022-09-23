@@ -23,7 +23,9 @@ INSERT INTO Citoyen VALUES
 ('Le roi', 'Lion'),
 ('Winnnie', 'L''ourson'),
 ('Le roi', 'Lion2'),
-('Winnnie', 'L''ourson2')
+('Winnnie', 'L''ourson2'),
+('Peter', 'Pan'),
+('PeterPeter', 'PanPan')
 
 -- Selectionner des données dans une table
 SELECT * FROM Citoyen
@@ -36,4 +38,35 @@ SELECT Prenom FROM Citoyen WHERE prenom = 'Lion'
 
 -- Mettre à jour des données avec UPDATE
 UPDATE Citoyen SET prenom = 'D''Agobert' WHERE prenom = 'Lion2'
-UPDATE Citoyen SET prenom = 'The Poo' WHERE nom = 'Winnie' AND prenom = 'Winnie'
+UPDATE Citoyen SET prenom = 'The Poo' WHERE prenom = 'L''ourson2'
+
+-- Insérer plusieurs fois la même valeur dans une table
+CREATE TABLE number (id int)
+
+INSERT INTO number VALUES (1)
+go 10
+
+SELECT * FROM number
+
+-- Supprimer des données dans une table
+
+DELETE FROM citoyen WHERE nom = 'PeterPeter'
+
+-- Exercice
+
+CREATE TABLE Etudiant (nom VARCHAR(200), prenom VARCHAR(10), age int)
+
+INSERT INTO Etudiant VALUES
+('Marchand', 'Isabelle', 18),
+('Truchon', 'Melanie', 16),
+('Teslu', 'Sandrine', 18),
+('Portail', 'Bruno', 23),
+('Virenque', 'Michel', 22)
+
+SELECT * FROM Etudiant WHERE nom = 'Teslu'
+
+UPDATE Etudiant SET age = 10 WHERE nom = 'Teslu'
+
+DELETE Etudiant WHERE nom = 'Virenque'
+
+SELECT * FROM Etudiant
