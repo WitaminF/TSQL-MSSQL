@@ -21,7 +21,7 @@ DROP TABLE Citoyen
 -- Insérer des données dans la table (INTO n'est pas obligatoire)
 INSERT INTO Citoyen VALUES
 ('Le roi', 'Lion'),
-('Winnnie', 'L''ourson')
+('Winnnie', 'L''ourson'),
 ('Le roi', 'Lion2'),
 ('Winnnie', 'L''ourson2')
 
@@ -36,3 +36,4 @@ SELECT Prenom FROM Citoyen WHERE prenom = 'Lion'
 
 -- Mettre à jour des données avec UPDATE
 UPDATE Citoyen SET prenom = 'D''Agobert' WHERE prenom = 'Lion2'
+UPDATE Citoyen SET prenom = 'The Poo' WHERE nom = 'Winnie' AND prenom = 'Winnie'
